@@ -18,4 +18,6 @@
     <remap from="transform" to="/RGBD/odom" />
   </node>
 
+  <arg name="rviz_file" default="$(find voxblox_ros)/cfg/voxblox_rs2_rviz.rviz" />
+  <node pkg="rviz" type="rviz" name="$(anon rviz)" output="screen" args="-d $(arg rviz_file)" />
 </launch>
